@@ -34,10 +34,12 @@ class User(AbstractUser):
 
     @property
     def is_admin(self):
+        """Проверка является ли пользователь администратором"""
         return self.role == User.ADMINISTRATOR
 
     @property
     def is_moderator(self):
+        """Проверка является ли пользователь модератором"""
         return self.role == User.MODERATOR
 
 
